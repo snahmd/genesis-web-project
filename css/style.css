@@ -17,6 +17,7 @@
   --primary-color: #4792a5;
   --light-color: #efefef;
   --dark-color: #3c3c3c;
+  --general-transition: all .4s ease;
 }
 
 html {
@@ -52,7 +53,7 @@ button {
 
 a {
   text-decoration:none;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
 }
 
 img {
@@ -134,13 +135,106 @@ ul {
   0%
   {
     opacity: 0;
-    transform: rotate(45deg) translate(-20px, -20px);
+    transform: rotate(45deg) translate(-2rem, -2rem);
   }
   50% {
     opacity:1;
   }
   100% {
     opacity: 0;
-    transform: rotate(45deg) translate(20px, 20px);
+    transform: rotate(45deg) translate(2rem, 2rem);
   }
+}
+
+/** Navigation Menu **/
+
+.nav {
+  background-color: rgba(71, 146, 165, .9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list li:last-child {
+  padding-right:0;
+}
+
+.nav-item {
+  padding: 0 2rem;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  color: var(--light-color);
+  font-weight:700;
+  transition: var(--general-transition);
+}
+
+.nav-link:hover {
+  color: var(--dark-color);
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  height: .2rem;
+  width:0;
+  opacity: 0;
+  background-color: var(--dark-color);
+  transition: var(--general-transition);
+
+}
+
+.nav-link:hover::after {
+  width:100%;
+  opacity: 1;
+  
+}
+
+/** LOGO **/
+
+.logo {
+  font-size: 4rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: var(--light-color);
+  text-align: center;
+  line-height: 7rem;
+  border-radius: 50%;
+  color: var(--primary-color);
+  transition: var(--general-transition);
+}
+
+.logo:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}  
+
+.navbar-toggler {
+  font-size: 2.2rem;
+  position: absolute;
+  right: 2.5rem;
+  z-index: 100;
+  display: none;
+}
+
+.navbar-toggler .line {
+  width: 2.5rem;
+  height: .4rem;
+  background-color: var(--dark-color);
+  margin: .5rem;
+  transition: var(--general-transition);
 }
