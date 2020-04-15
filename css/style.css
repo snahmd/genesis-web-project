@@ -71,6 +71,83 @@ ul {
   margin: 0 auto;
 }
 
+/** Custom Classes **/
+
+.sec-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.vertical-title{
+  font-size:2rem;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  word-spacing: 1rem;
+  transform:rotate(-90deg);
+  position: absolute;
+  top:50%;
+  left: -5%;
+}
+
+.vertical-title-right{
+  /* color: var(--light-color); */
+  left: 95%;
+  transform: rotate(90deg);
+  white-space: nowrap;
+}
+
+.btn-general{
+  font-family: var(--secondary-font);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  padding: .5rem 2rem;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  border-radius:2rem;
+}
+
+.btn-light{
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: var(--general-transition);
+}
+
+.btn-light:hover{
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+.btn-dark{
+  color: var(--light-color);
+  border: 2px solid var(--light-color);
+  transition: var(--general-transition);
+}
+
+.btn-dark:hover{
+  color: var(--primsry-color);
+  background-color: var(--light-color);
+}
+
+.horizontal-title {
+  padding-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 300;
+
+}
+
+.pri-background {
+  background-color: var(--primary-color);
+}
+
+.light-color{
+  color: var(--light-color);
+}
+
 /** HERO SECTİON **/
 
 #hero {
@@ -237,4 +314,30 @@ ul {
   background-color: var(--dark-color);
   margin: .5rem;
   transition: var(--general-transition);
+}
+
+/** About Section **/
+
+.about-detail{
+  margin-left: 4rem;
+}
+
+/** Services Section **/
+
+.services-detail {
+  margin-right:4rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn-arrows {
+  display: flex;
+  padding-top:2rem;
+}
+
+#arrow-left, #arrow-right {
+  cursor: pointer;
+  margin-left: 2rem;
 }
